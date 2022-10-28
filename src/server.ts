@@ -1,9 +1,14 @@
 import { launch } from 'puppeteer';
-import express from 'express';
+import express, { Request, Response } from 'express';
 
 const server = express();
 
-server.
+server.get('/', (_request: Request, response: Response) => {
+    response.send("Hello Galaxy!");
+});
+
+const port = process.env.PORT || 3000;
+server.listen(port, () => console.log(`Servidor running on port ${port}`));
 
 (async () => {
     const browser = await launch();
