@@ -9,7 +9,7 @@ const link = "https://pt.aliexpress.com/af/redmi-10-pro.html?d=y&origin=n&Search
 
 
 server.get('/', async(_request: Request, response: Response) => {
-    let robozinho = new CrawlerAli("Nada aqui");
+    let robozinho = new CrawlerAli("redmi 10 pro");
     //let dataCrawler = robozinho.teste();
     let dataCrawler = await robozinho.run();
 
