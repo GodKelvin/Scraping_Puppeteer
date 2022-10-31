@@ -6,8 +6,6 @@ export class CrawlerAli{
     link: string = `https://pt.aliexpress.com/af/initValue.html?d=y&origin=n&SearchText=middleValue&catId=0&spm=a2g0o.best.1000002.0&initiative_id=SB_20221028161423`;
     busca: string;
 
-    //https://pt.aliexpress.com/af/redmi-10-pro.html?d=y&origin=n&SearchText=redmi+10+pro&catId=0&spm=a2g0o.best.1000002.0&initiative_id=SB_20221028161423
-
     constructor(busca: string){
         this.busca = busca;
         this.mountQuery();
@@ -56,9 +54,9 @@ export class CrawlerAli{
     }
 
     private mountQuery(): void{
-        let initValue = this.busca.replace(/ /g, "-");
-        let middleValue = this.busca.replace(/ /g, "+");
-        this.link = this.link.replace("initValue", initValue);
-        this.link = this.link.replace("middleValue", middleValue);
+        this.link = this.link.replace("initValue", this.busca.replace(/ /g, "-"));
+        this.link = this.link.replace("middleValue", this.busca.replace(/ /g, "+"));
     }
+
+    //#@TODO: Log no discord
 }
