@@ -4,12 +4,12 @@ import cron from 'node-cron';
 import { CrawlerAli } from './models/Crawler';
 
 const server = express();
-server.get('/', async(_request: Request, response: Response) => {
+server.get('/', async(_req: Request, res: Response) => {
     let robozinho = new CrawlerAli("redmi 10 pro");
     //let dataCrawler = robozinho.teste();
     let dataCrawler = await robozinho.run();
 
-    response.send({"data": dataCrawler})
+    res.status(200).json(dataCrawler);
 });
 
 
