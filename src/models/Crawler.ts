@@ -20,8 +20,8 @@ export class CrawlerAli{
             timeout: 0
         });
 
-        // //Gera um print da pag acessada
-        // //await page.screenshot({path: "example.png"});
+        //Gera um print da pag acessada
+        //await page.screenshot({path: "example.png"});
         let pageContent: Produto[] = await page.evaluate(() => {
             function cleanDiv(div: any, classCSS: String): string{
                 return div.querySelector(classCSS)?.innerText;
