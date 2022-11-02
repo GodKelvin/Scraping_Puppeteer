@@ -52,7 +52,6 @@ export class CrawlerAli{
         });
     
         await browser.close();
-        console.log(pageContent);
         return pageContent;
     }
 
