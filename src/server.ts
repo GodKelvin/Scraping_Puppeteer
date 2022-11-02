@@ -4,7 +4,6 @@ import indexRoutes from './routes/indexRoutes';
 //import cron from 'node-cron';
 
 const server = express();
-//server.use(express.json());
 server.use(indexRoutes);
 
 server.get('/', async(_req: Request, res: Response) => {
@@ -13,5 +12,5 @@ server.get('/', async(_req: Request, res: Response) => {
 
 const port = process.env.PORT || 3000;
 server.listen(port, () => {
-    console.log(`Servidor running on port ${port}, acess: http://localhost:3000/`);
+    console.log(`Servidor running on port ${port}, acess: http://localhost:${port}/`);
 });
