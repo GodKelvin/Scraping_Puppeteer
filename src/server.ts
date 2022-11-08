@@ -12,6 +12,5 @@ server.get('/', async(_req: Request, res: Response) => {
 
 const port = process.env.PORT || 3000;
 server.listen(port, () => {
-    console.log("Github?");
     console.log(`Servidor running on port ${port}, acess: http://localhost:${port}/`);
 });
