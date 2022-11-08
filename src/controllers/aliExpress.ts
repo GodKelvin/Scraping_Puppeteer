@@ -8,6 +8,6 @@ export const getAli = async(req: Request, res: Response): Promise<any> => {
         return res.status(200).json(dataCrawler);
     }catch(error){
         //@TODO inserir logs
-        return res.status(500).json("Internal Server Error");
+        return res.status(500).json(`Internal Server Error -> ${error}`);
     }
 }
