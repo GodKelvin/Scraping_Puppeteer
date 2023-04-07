@@ -1,5 +1,5 @@
 import { Request, Response } from "express"
-import { CrawlerAli } from '../models/Crawler';
+import { CrawlerAli } from '../models/crawlerAli';
 export const getAli = async(req: Request, res: Response): Promise<any> => {
     try{
         if(!req.query.search) return res.status(400).json({pendente: "params SEARCH nao foi identificado"}) ;
