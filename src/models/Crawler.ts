@@ -1,5 +1,3 @@
-import { rejects } from 'assert';
-import { resolve } from 'path';
 import { launch } from 'puppeteer';
 import { Produto } from '../types/produto';
 export class CrawlerAli{
@@ -21,7 +19,7 @@ export class CrawlerAli{
         });
 
         //Gera um print da pag acessada
-        //await page.screenshot({path: "example.png"});
+        await page.screenshot({path: "screenshot_page.png"});
         let pageContent: Produto[] = await page.evaluate(() => {
             function cleanDiv(div: any, classCSS: String): string{
                 return div.querySelector(classCSS)?.innerText;
@@ -38,14 +36,14 @@ export class CrawlerAli{
             }
     
     
-            let divs = [...document.querySelectorAll("._3t7zg._2f4Ho")]
+            let divs = [...document.querySelectorAll(".manhattan--container--1lP57Ag")]
             return divs.map((el: any) => {
                 return {
-                    nome: cleanDiv(el, "._18_85"),
-                    preco: getPreco(el, ".mGXnE._37W_B span"),
-                    loja: cleanDiv(el, "._7CHGi"),
-                    qtdVendidos: Number(cleanDiv(el, "._1kNf9")?.split(' ')[0]),
-                    avaliacao: Number(cleanDiv(el, ".eXPaM")),
+                    nome: cleanDiv(el, ".manhattan--titleText--WccSjUS"),
+                    preco: getPreco(el, ".manhattan--price-sale--1CCSZfK"),
+                    loja: cleanDiv(el, ".cards--storeLink--1_xx4cD"),
+                    qtdVendidos: cleanDiv(el, ".manhattan--trade--2PeJIEB"),
+                    avaliacao: Number(cleanDiv(el, ".manhattan--evaluation--3cSMntr")),
                     link: el.href
                 }
             });
