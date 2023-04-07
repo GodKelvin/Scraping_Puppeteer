@@ -2,7 +2,7 @@
 A técnica de scraping consiste na coleta de informações de sites de forma automatizada. Envolve escrever um script voltado para determinada página da web.
 
 # Puppeteer
-Neste estudo foi utilizada a biblioteca puppeteer, responsável por buscar as informações das respectivas páginas web.
+Neste estudo foi utilizada a biblioteca puppeteer, responsável por buscar o HTML das respectivas páginas web.
 
 Documentação: https://pptr.dev/
 ## Observações
