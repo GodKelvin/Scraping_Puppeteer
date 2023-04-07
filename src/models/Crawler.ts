@@ -1,8 +1,8 @@
 import { launch } from 'puppeteer';
 import { Produto } from '../types/produto';
 export class CrawlerAli{
-    //initValue & middleValue serao substituidos
-    link: string = `https://pt.aliexpress.com/af/initValue.html?d=y&origin=n&SearchText=middleValue&catId=0&spm=a2g0o.best.1000002.0&initiative_id=SB_20221028161423`;
+    //initValue & middleValue serao substituidos (valores vindo em 'process.env.PAGINA_CRAWLEADA')
+    link: any = process.env.PAGINA_CRAWLEADA;
     busca: string;
 
     constructor(busca: string){

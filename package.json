@@ -21,6 +21,7 @@
     "@types/node": "^18.11.7",
     "@types/node-cron": "^3.0.5",
     "@types/puppeteer": "^5.4.7",
+    "dotenv": "^16.0.3",
     "nodemon": "^2.0.20",
     "ts-node": "^10.9.1",
     "tslint": "^6.1.3",
