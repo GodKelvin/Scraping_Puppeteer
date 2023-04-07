@@ -27,7 +27,6 @@ Uma lista em formato JSON contendo, no momento: nome, preco, loja, quantidade ve
         "avaliacao": 4.8,
         "link": "www.link.exempĺo.com"
     },
-    ...
 ]
 ```
 
